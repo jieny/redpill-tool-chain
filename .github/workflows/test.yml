@@ -105,7 +105,7 @@ jobs:
           sed -i 's/debian:8-slim/debian:10-slim/g' global_config.json
           ./redpill_tool_chain.sh build ${{matrix.platform}}-${{matrix.version}}
           ./redpill_tool_chain.sh pat ${{matrix.platform}}-${{matrix.version}}
-          sed -i 's/debian:10-slim/debian:8-slim/g' global_config.json
+          sed -i 's/debian:10-slim/debian:10-slim/g' global_config.json
           ./redpill_tool_chain.sh build ${{matrix.platform}}-${{matrix.version}}
 
       - name: 编译引导镜像
